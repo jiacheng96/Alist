@@ -11,7 +11,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let itemArray = ["Go to Richmond", "Pick up Chelsea", "Get license"]
+    var itemArray = ["Go to Richmond", "Pick up Chelsea", "Get license"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,35 @@ class TableViewController: UITableViewController {
         
         
     }
+    
+//    Add New Items
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New List Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+//         What will happen once the user clicks on the add item button
+            self.itemArray.append(textField.text!)
+            self.tableView.reloadData()
 
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+            
+            
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
 
 }
 
