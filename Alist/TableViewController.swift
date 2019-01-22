@@ -11,12 +11,16 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    let defaults = UserDefaults.standard
+    
     var itemArray = ["Go to Richmond", "Pick up Chelsea", "Get license"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        if let items = defaults.array(forKey: "AListArray") as? [String] {
+            itemArray = items
+        }
     }
     
 //    TableView datasource methods
@@ -58,6 +62,9 @@ class TableViewController: UITableViewController {
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
 //         What will happen once the user clicks on the add item button
             self.itemArray.append(textField.text!)
+            
+            self.defaults.set(self.itemArray, forKey: "AListArray")
+            
             self.tableView.reloadData()
 
         }
