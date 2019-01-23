@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alist-->
+        <!--AList-->
         <scene sceneID="1jC-aR-TzM">
             <objects>
                 <tableViewController id="pCU-dg-oCO" customClass="TableViewController" customModule="Alist" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="pCU-dg-oCO" id="vh4-bH-ptU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Alist" id="HYJ-f8-5tA">
+                    <navigationItem key="navigationItem" title="AList" id="HYJ-f8-5tA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3z-LZ-Iwq">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
