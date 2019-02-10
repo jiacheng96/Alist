@@ -15,6 +15,7 @@
 		14E5135521FAF26C001BB08B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5135421FAF26C001BB08B /* CategoryViewController.swift */; };
 		14E51359220152E3001BB08B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E51358220152E3001BB08B /* Item.swift */; };
 		14E5135B220152EE001BB08B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5135A220152EE001BB08B /* Category.swift */; };
+		14E5139C22043E25001BB08B /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5139B22043E25001BB08B /* SwipeTableViewController.swift */; };
 		82D75DF61EF271E107B0A502 /* Pods_Alist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D7FB40E6FA09663389D6BF /* Pods_Alist.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		14E5135421FAF26C001BB08B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		14E51358220152E3001BB08B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		14E5135A220152EE001BB08B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		14E5139B22043E25001BB08B /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		341614A2CFDE30CEC727D100 /* Pods-Alist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alist/Pods-Alist.release.xcconfig"; sourceTree = "<group>"; };
 		35D7FB40E6FA09663389D6BF /* Pods_Alist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		464C6AB415B7A4E781FFBCF9 /* Pods-Alist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alist/Pods-Alist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				14E5135421FAF26C001BB08B /* CategoryViewController.swift */,
 				14E5131A21F1B318001BB08B /* TableViewController.swift */,
+				14E5139B22043E25001BB08B /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,15 +232,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Alist/Pods-Alist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,6 +262,7 @@
 				14E5135521FAF26C001BB08B /* CategoryViewController.swift in Sources */,
 				14E5131B21F1B318001BB08B /* TableViewController.swift in Sources */,
 				14E5131921F1B318001BB08B /* AppDelegate.swift in Sources */,
+				14E5139C22043E25001BB08B /* SwipeTableViewController.swift in Sources */,
 				14E5135B220152EE001BB08B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
