@@ -8,6 +8,7 @@
 
 import UIKit
 import SwipeCellKit
+import ChameleonFramework
 
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
 
@@ -27,7 +28,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         
         cell.delegate = self
         
-        
+       
         return cell
     }
     
@@ -58,6 +59,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
 //        Update data model
         
     }
+    
 
  
 

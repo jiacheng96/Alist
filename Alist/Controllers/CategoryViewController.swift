@@ -110,7 +110,7 @@ class CategoryViewController: SwipeTableViewController {
         let action = UIAlertAction (title: "Add", style: .default) { (action) in
             let newCategory = Category()
             newCategory.name = textField.text!
-            newCategory.colour = UIColor.randomFlat.hexValue()
+            newCategory.colour = self.MyRandomColour().hexValue()
             
             
             self.save (category: newCategory)
@@ -127,4 +127,11 @@ class CategoryViewController: SwipeTableViewController {
         present(alert, animated: true, completion: nil)
         
     }
+    
+    //MARK: - Add Random Colour to Cell
+    func MyRandomColour() -> UIColor {
+        let colorArray = [UIColor.flatBlue, UIColor.flatSkyBlue, UIColor.flatNavyBlue, UIColor.flatPurple, UIColor.flatWatermelon, UIColor.flatMagenta, UIColor.flatOrange]
+        return colorArray.randomElement() ?? UIColor.clear
+    }
+
 }
